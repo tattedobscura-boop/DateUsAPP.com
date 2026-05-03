@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <!-- Rounded square background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c1626"/>
+      <stop offset="100%" stop-color="#120e1c"/>
+    </linearGradient>
+    <!-- Left arc gradient -->
+    <linearGradient id="ga" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8b89a"/>
+      <stop offset="100%" stop-color="#c9815a"/>
+    </linearGradient>
+    <!-- Right arc gradient -->
+    <linearGradient id="gb" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9815a"/>
+      <stop offset="100%" stop-color="#9b4468"/>
+    </linearGradient>
+    <!-- Gold spark -->
+    <linearGradient id="gc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0d080"/>
+      <stop offset="100%" stop-color="#d4a843"/>
+    </linearGradient>
+    <!-- Soft inner glow -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- App icon background -->
+  <rect width="48" height="48" rx="12" fill="url(#bg)"/>
+  <!-- Subtle inner border glow -->
+  <rect width="48" height="48" rx="12" fill="none" stroke="rgba(201,129,90,0.18)" stroke-width="1"/>
+
+  <!-- Left arc of the D -->
+  <path d="M13 7 C6 7 4 14 4 24 C4 34 6 41 13 41 L17 41 C10 41 8 34 8 24 C8 14 10 7 17 7 Z"
+        fill="url(#ga)" opacity="0.95"/>
+
+  <!-- Right arc of the D -->
+  <path d="M17 7 C29 7 44 13 44 24 C44 35 29 41 17 41 L21 41 C31 41 40 35 40 24 C40 13 31 7 21 7 Z"
+        fill="url(#gb)" opacity="0.93"/>
+
+  <!-- Dark heart cutout -->
+  <path d="M24 37 C24 37 11 27.5 11 20 C11 15.2 14.8 12.5 18.5 12.5 C20.6 12.5 22.8 13.8 24 15.4 C25.2 13.8 27.4 12.5 29.5 12.5 C33.2 12.5 37 15.2 37 20 C37 27.5 24 37 24 37Z"
+        fill="#120e1c" opacity="0.85"/>
+
+  <!-- Inner heart fill -->
+  <path d="M24 34 C24 34 14 26.2 14 19.8 C14 16.4 16.6 14.5 19.2 14.5 C21 14.5 23 15.9 24 17.4 C25 15.9 27 14.5 28.8 14.5 C31.4 14.5 34 16.4 34 19.8 C34 26.2 24 34 24 34Z"
+        fill="url(#ga)" filter="url(#glow)" opacity="0.92"/>
+
+  <!-- Gold spark dot at top of heart -->
+  <circle cx="24" cy="13.5" r="2.4" fill="url(#gc)" opacity="0.96"/>
+</svg>
